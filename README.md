@@ -6,6 +6,5 @@ GisPandas是一个为栅格数据处理、分析和可视化而开发的Python�
 # 安装
 pip install gispandas
 # 相关链接
-本项目的github页面：https://github.com/mxhou/gispandas/
-
+本项目的github页面：https://github.com/mxhou/gispandas
 有bug请在这个页面提交：https://github.com/mxhou/gispandas/issues
