@@ -8,9 +8,7 @@
 '''
 
 # here put the import lib
-import sys
-sys.path.append('E:\Project\gispandas\src')
-import  gispandas.gispandas as gp
+import  gispandas as gp
 import pandas as pd
 import numpy as np
 import geopandas as gpd

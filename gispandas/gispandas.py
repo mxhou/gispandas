@@ -20,9 +20,17 @@ from rasterstats import zonal_stats
 
 
 def tif2area(intif,inshp,class_dic,outjson,resolution=10,year=time.strftime('%Y'),code = 'code',name = 'name'):
-
+    '''
+    intif:待统计的栅格数据
+    inshp:待统计的矢量区划
+    class_dic:作物类别和栅格像元值
+    outjson:输出的统计json文件
+    resolution:分辨率
+    year:数据年份，默认为代码运行时的年份
+    code:矢量数据里行政区划代码的字段名称
+    name:矢量数据里行政区划名称的字段名称
+    '''
     # 投影
-
     # 投影矢量
     dst_crs = '+proj=aea +lat_1=25 +lat_2=47 +lat_0=0 +lon_0=105 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs'
     gdf = gpd.read_file(inshp)

@@ -1,1 +1,1 @@
-from .gispandas import tif2area
+from .gispandas import *
