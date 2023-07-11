@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 '''
-@File    :   tif2json.py
+@File    :   tifarea.py
 @Time    :   2023/03/31 16:04:48
 @Author  :   HMX
 @Version :   1.0
@@ -20,9 +20,19 @@ from rasterstats import zonal_stats
 
 
 def tif2area(intif,inshp,class_dic,outjson,resolution=10,year=time.strftime('%Y'),code = 'code',name = 'name'):
+    '''根据矢量区划统计tif数据的面积
 
+    :param intif: 待统计的栅格数据
+    :param inshp: 待统计的矢量区划
+    :param class_dic: 作物类别和栅格像元值
+    :param outjson: 输出的统计json文件,注意导出的area单位默认为亩
+    :param resolution: 分辨率, defaults to 10
+    :param year: 数据年份, defaults to time.strftime('%Y')
+    :param code: 矢量数据里行政区划代码的字段名称, defaults to 'code'
+    :param name: 矢量数据里行政区划名称的字段名称, defaults to 'name'
+    :return: 输出的统计json文件
+    '''
     # 投影
-
     # 投影矢量
     dst_crs = '+proj=aea +lat_1=25 +lat_2=47 +lat_0=0 +lon_0=105 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs'
     gdf = gpd.read_file(inshp)
@@ -54,7 +64,7 @@ def tif2area(intif,inshp,class_dic,outjson,resolution=10,year=time.strftime('%Y'
         )
 
     # 空间统计
-    dx_re, dy_re = 10,10
+    dx_re, dy_re = resolution,resolution
     ks = list(class_dic.keys())
     vs = list(class_dic.values())
     stats = zonal_stats(gdf, dst_arr

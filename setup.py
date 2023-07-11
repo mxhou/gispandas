@@ -13,7 +13,7 @@ setup(
     url="https://github.com/mxhou/gispandas/",
     zip_safe=False,
     # What packages are required for this module to be executed?
-    REQUIRED = ['geopandas', 'numpy','json','rasterio','rasterstats'],
+    REQUIRED = ['geopandas', 'numpy','json','rasterio','rasterstats','gdal'],
     license='MIT',
     python_requires=">=3.6",
     keywords=['gis','geo','tif','json'],

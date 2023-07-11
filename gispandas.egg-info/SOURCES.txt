@@ -2,7 +2,12 @@ README.md
 setup.py
 E:/Project/gispandas/README.md
 gispandas/__init__.py
-gispandas/gispandas.py
+gispandas/gago_gdal.py
+gispandas/geemerge.py
+gispandas/mxgdal.py
+gispandas/shpinfo.py
+gispandas/tifarea.py
+gispandas/tifchange.py
 gispandas.egg-info/PKG-INFO
 gispandas.egg-info/SOURCES.txt
 gispandas.egg-info/dependency_links.txt
