@@ -10,8 +10,6 @@
 # here put the import lib
 import  gispandas as gp
 import pandas as pd
-import numpy as np
-import geopandas as gpd
 import time
 
 if __name__ == '__main__':
@@ -20,7 +18,7 @@ if __name__ == '__main__':
     inshp = r'E:\Project\潍坊项目v2\客户矢量v5\all\wf_all2000_info.geojson'
     class_dic = {"wheat": 107}
     outjson = r'E:\Project\gispandas\example\wheat23.json'
-    gp.tif2area(intif,inshp,class_dic,outjson,year = 2022)
+    gp.tif2area(intif,inshp,class_dic,outjson)
     t2 = time.time()
     print('共计用时{:.2f}s'.format(t2 -t1))
     df = pd.read_json(outjson)
