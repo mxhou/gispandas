@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 import rasterio
 import rasterio.mask
-from mxgdal import *
+from gispandas.mxgdal import *
 from rasterio.warp import Resampling, calculate_default_transform, reproject
 from rasterstats import zonal_stats
 

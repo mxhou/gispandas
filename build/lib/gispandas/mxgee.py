@@ -12,7 +12,7 @@ import numpy as np
 from osgeo import gdal
 import os
 import time
-from mxgdal import *
+from gispandas.mxgdal import *
 
 
 

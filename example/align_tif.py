@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 '''
-@File    :   DEMO.py
+@File    :   align_tif.py
 @Time    :   2023/07/13 11:19:48
 @Author  :   HMX
 @Version :   1.0

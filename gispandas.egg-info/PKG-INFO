@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: gispandas
-Version: 0.1.8
+Version: 0.1.9
 Summary: gispandas
 Home-page: https://github.com/mxhou/gispandas/
 Author: HMX
@@ -17,7 +17,7 @@ GisPandas是一个为栅格、矢量数据处理、分析以及可视化而开�
 
 1.栅格数据进行阿尔伯斯等面积投影，根据矢量区划计算面积并导出json。
 
-2.种植结构变化,自动对齐，导出栅格数据和统计json。
+2.种植结构变化，自动对齐，导出栅格数据和统计json。
 
 3.gee下载数据的后处理主要包括：栅格数据镶嵌并压缩。
 

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os import path
 this_directory = path.abspath(path.dirname(__file__))
 filepath = path.join(this_directory, 'README.md')
-VERSION = '0.1.8'
+VERSION = '0.1.9'
 setup(
     name='gispandas',  # package name
     version=VERSION,  # package version
