@@ -14,7 +14,7 @@ import pandas as pd
 from shapely import geometry
 warnings.filterwarnings('ignore')
 
-def write_info(shp,outshp=None):
+def shpinfo(shp,outshp=None):
     '''写入矢量数据的四至和中心经纬度
 
     :param shp: 待计算的矢量文件路径
@@ -82,3 +82,12 @@ def smoothshp(fn,outshp,EPSG=4326):
     gdf['geometry'] = gdf['geometry'].simplify(tolerance=0.1, preserve_topology=False)
     gdf.to_file(outshp,encoding='utf-8')
 
+
+def projshp(shp,outshp,EPSG = 4490):
+    '''投影矢量
+
+    :param shp: 待投影矢量路径
+    :param outshp: 投影后矢量路径
+    '''
+    gdf = gpd.read_file(shp).to_crs(f'EPSG:{EPSG}')
+    gdf.to_file(outshp)

@@ -8,10 +8,10 @@
 '''
 
 # here put the import lib
-from .gago_gdal import *
-from .geemerge import *
-from .tifchange import *
-from .shpinfo import *
-from .tifarea import *
-from .gago_gdal import *
+from .mxclf import *
 from .mxgdal import *
+from .mxgee import *
+from .mxgpd import *
+
+
+__version__ = "0.1.8"

@@ -12,23 +12,8 @@ import numpy as np
 from osgeo import gdal
 import os
 import time
+from mxgdal import *
 
-
-def compress_tiff(intif, method="LZW") -> None:
-    '''
-    使用gdal,按照LZW方式压缩单张tiff
-    LZW方法属于无损压缩，效果非常给力，4G大小的数据压缩后只有三十多M
-    :param tiff: 原始tiff
-    :param method: 压缩方式
-    :return: None
-    '''
-    dataset = gdal.Open(intif)    
-    driver = gdal.GetDriverByName('GTiff')
-    outtif = intif.replace('.tif','_out.tif')
-    driver.CreateCopy(outtif, dataset, strict=1, options=["TILED=YES", "COMPRESS={0}".format(method),'BIGTIFF=YES'])
-    del dataset
-    os.remove(intif)    
-    os.rename(outtif, intif)
 
 
 def merge_geetif(infp,outfp,lzw = True):
@@ -63,4 +48,4 @@ def merge_geetif(infp,outfp,lzw = True):
                                         )
         gdal.Warp(outtif, outfs, options=options)
         if lzw == True:
-            compress_tiff(outtif, method="LZW")
+            comptif(outtif, method="LZW")

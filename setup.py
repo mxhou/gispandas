@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from os import path
 this_directory = path.abspath(path.dirname(__file__))
 filepath = path.join(this_directory, 'README.md')
-VERSION = '0.1.7'
+VERSION = '0.1.8'
 setup(
     name='gispandas',  # package name
     version=VERSION,  # package version
@@ -16,7 +16,7 @@ setup(
     REQUIRED = ['geopandas', 'numpy','json','rasterio','rasterstats','gdal'],
     license='MIT',
     python_requires=">=3.6",
-    keywords=['gis','geo','tif','json'],
+    keywords=['gis','geo','tif','json','shp'],
     data_files=[filepath],
     long_description=open(filepath, encoding='utf-8').read(),
     long_description_content_type='text/markdown'
